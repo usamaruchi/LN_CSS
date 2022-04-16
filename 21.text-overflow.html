@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 200px;
+            height: 300px;
+            background-color: aqua;
+        }
+
+        .singer{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            
+            overflow: hidden;
+        }
+
+
+        .mutiple{
+            display: -webkit-box;
+            -webkit-line-clamp:4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+        }        
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <p class="single">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sequi quis cumque deserunt repellat, suscipit ipsum maxime libero similique beatae, eaque porro doloribus consequuntur corrupti odio consequatur adipisci nisi officia.
+        </p>
+        <!-- <p class="mutipe">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sequi quis cumque deserunt repellat, suscipit ipsum maxime libero similique beatae, eaque porro doloribus consequuntur corrupti odio consequatur adipisci nisi officia.
+        </p> -->
+    </div>
+</body>
+</html>

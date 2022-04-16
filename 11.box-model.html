@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            background-size: contain;
+
+            margin: 50px;
+            padding: 20px;
+            border: 5px solid black;
+
+            /* 由外擴長，影響原本框架大小，無法固定 */
+            /* box-sizing: content-box; */
+
+            /* 向內縮減，原本框架大小不變，可計算排版範圍（主要） */
+            box-sizing: border-box;
+
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            background-size: contain;
+
+            margin: 50px;
+            padding: 20px;
+            border: 5px solid black;
+
+            /* 由外擴長，影響原本框架大小，無法固定 */
+            box-sizing: content-box;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>board imgage</title>
+
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+
+            /* 黑色邊框 */
+            border: 20px solid black;
+            
+            /* 圖片搜不到會顯示透明邊框 */
+            border: 20px solid transparent;
+
+            /* 圖片切割每份20（原圖為60），round等分 */
+            border-image: url(./images/border-image.png)20 round;
+
+            /* repeat連續重複 */
+            /* border-image: url(./images/border-image.png)20 repeat; */
+
+            /* repeat連續重複 */
+            /* border-image: url(./images/border-image.png)20 stretch; */
+
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            /* repeat連續重複 */
+
+            /* 黑色邊框 */
+            border: 20px solid black;
+            
+            /* 圖片搜不到會顯示透明邊框 */
+            border: 20px solid transparent;
+
+            border-image: url(./images/border-image.png)20 repeat;
+
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+
+            border: 20px solid black;
+
+            /* 圖片搜不到會顯示透明邊框 */
+            border: 20px solid transparent;
+
+            border-image: url(./images/border-image.png)20 stretch;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+
+    <div class="box2">box2</div>
+
+    <div class="box3">box3</div>
+</body>
+</html>

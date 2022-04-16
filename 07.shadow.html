@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow</title>
+
+    <style>
+        .box {
+            margin: 10px;
+
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+
+            transition: .3s;
+        }
+
+        .box1:hover {
+            box-shadow: 10px 10px 3px rgb(149, 149, 149);
+        }
+
+        /* h-offset  v-offset  blur  spread外擴 color  */
+        .box2:hover {
+            box-shadow: 10px 10px 3px 10px rgb(149, 149, 149);
+        }
+
+        /* h-offset  v-offset  blur  spread color  Inset向內*/
+        .box3:hover {
+            box-shadow: 10px 10px 5px rgb(90, 90, 90)inset;
+        }
+
+        /* 多重陰影 */
+        .box4:hover {
+            box-shadow: 10px 0px 5px rgb(255, 71, 71), -10px 0px 5px rgba(245, 255, 108, 0.849), 0px 10px 5px rgba(111, 197, 255, 0.849), 0px -10px 5px rgba(156, 255, 139, 0.849);
+        }
+        .box5{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+
+            background-color: rgb(255, 223, 40);
+            box-shadow: 0px 0px 10px 3px red inset,0 0 15px 15px orange inset;
+        }
+        .box6{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin: 50px;
+            border: 1px solid transparent;
+            background-color: gray;
+
+            box-shadow: 25px -25px 0px -10px gray, -25px -25px 0px -10px gray
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+
+
+
+</body>
+
+</html>

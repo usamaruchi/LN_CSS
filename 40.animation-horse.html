@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .tea {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        background: url(https://tw.tp-tea.com/images/animate2.jpg) no-repeat;
+        width: 254px;
+        height: 242px;
+        -webkit-animation: sprite2 1s steps(12) infinite;
+        animation: sprite2 1s steps(12) infinite;
+        z-index: 99;
+
+    }
+
+    @keyframes sprite2 {
+        0% {
+            background-position: 0 0;
+            background-position-x: 0px;
+            background-position-y: 0px;
+        }
+        100% {
+            background-position: 0 -2904px;
+        }
+    }
+</style>
+
+<body>
+    <div class="tea"></div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 70%;
+            margin: 10px auto 10px auto;     
+        }
+
+        p{
+            border: 1px solid red;
+        }
+
+        .normal{
+            word-break: normal;
+            
+            /* 避免文字太長 */
+            word-wrap: break-word;
+        }
+        
+        .break-all{
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+        .keep-all{
+            word-break: keep-all;
+            word-wrap: break-word;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, libero tempore labore eos ducimus ipsam quos enim totam sapiente similique asperiores nisi ipsa perspiciatis expedita dignissimos quod nihil provident? Impedit. 中學規模校長技巧衝突那樣溝通房地產明星友情某個其實共同一定要，金錢參數我真活力檢驗，很好男孩建材壓縮畫面社區，計算事項暴力網頁課程漂亮事實主任你的內置修改過程區別基層，希望失望，皮膚每個充分，資金檔案描述鄉民含有，反而溝通集中為你這樣因此成績首次，維持之。</p>
+
+        <p class="break-all">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, libero tempore labore eos ducimus ipsam quos enim totam sapiente similique asperiores nisi ipsa perspiciatis expedita dignissimos quod nihil provident? Impedit. 中學規模校長技巧衝突那樣溝通房地產明星友情某個其實共同一定要，金錢參數我真活力檢驗，很好男孩建材壓縮畫面社區，計算事項暴力網頁課程漂亮事實主任你的內置修改過程區別基層，希望失望，皮膚每個充分，資金檔案描述鄉民含有，反而溝通集中為你這樣因此成績首次，維持之。</p>
+
+        <p class="keep-all">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, libero tempore labore eos ducimus ipsam quos enim totam sapiente similique asperiores nisi ipsa perspiciatis expedita dignissimos quod nihil provident? Impedit. 中學規模校長技巧衝突那樣溝通房地產明星友情某個其實共同一定要，金錢參數我真活力檢驗，很好男孩建材壓縮畫面社區，計算事項暴力網頁課程漂亮事實主任你的內置修改過程區別基層，希望失望，皮膚每個充分，資金檔案描述鄉民含有，反而溝通集中為你這樣因此成績首次，維持之。</p>
+    </div>
+</body>
+</html>

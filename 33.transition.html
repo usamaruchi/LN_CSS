@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background-color: rgb(127, 255, 255);
+            
+            /* flot */
+            /* float: left;
+            margin: 5px; */
+
+            /* 圖片藏在裡面 */
+            overflow: hidden;
+
+            transition: 2s;
+        }
+
+        .translateX:hover {
+            transform: translate(30px, 70px);
+        }
+
+        .rotate:hover {
+            transform: rotate(360deg);
+        }
+
+        .scale:hover {
+            transform: scale(1.2);
+        }
+
+        .skewX:hover {
+            transform: skewX(30deg);
+        }
+
+        /* 製作圖片內部放大效果 */
+
+        /* 先把圖片包一層 */
+        .imgscale {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .imgscale img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .imgscale:hover {
+            transform: scale(1.2);
+
+        }
+
+        .translateX-rotate:hover {
+
+            transform: translateX(200px) rotate(360deg);
+
+            /* 先 */
+            /* transform:rotate(360deg) translateX(500px); */
+        }
+
+        .container:hover{
+            transform: rotate(360deg);
+        }
+
+
+        .rotate-origine {
+            /* 起始定點座標位置為物件中心 */
+            /* 定位起始點座標，設定rotate會根據起始點位置旋轉 */
+            transform-origin: 0px 0px;
+        }
+
+        .rotate-origine:hover {
+            /* 設定中心位置來改變旋轉中心 */
+            transform: rotate(360deg);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box translateX">translateX</div>
+    <div class="box rotate">rotate</div>
+    <div class="box scale">scale</div>
+    <div class="box skewX">skewX</div>
+
+    <div class="box">
+        <div class="box imgscale">
+            <img src="./images/flowers.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="box translateX-rotate">translateX-rotate</div>
+
+    <div class="container">
+        <div class="box rotate-origine">rotate-origine</div>
+    </div>
+    
+
+</body>
+
+</html>

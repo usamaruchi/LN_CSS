@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .box{
+            box-sizing: border-box;
+            border: 1px solid red;
+        }
+        
+        /* vw會連同瀏覽網站的捲軸一起算在內，所以用%會一起算入畫面中占一部分比例 */
+
+
+        
+        .box1{
+            width: 100%;
+            height: 51vh;
+            background-color: aquamarine;
+        }
+
+        .box2{
+            width: 100vw;
+            height: 50vh;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</body>
+</html>

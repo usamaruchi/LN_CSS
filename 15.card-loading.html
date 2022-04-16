@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .card{
+            width: 300px;
+            height: 400px;
+            background-color: rgb(139, 139, 139);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .grad{
+            height: 150px;
+            border-radius: 10px;
+            background: linear-gradient(100deg, rgba(255, 255, 255,0)40%, rgba(255, 255, 255, 0.4),rgb(255, 255, 255,0)60%),gold;
+            
+            background-size: 200% 100%;
+            background-position-x: 180%;
+
+            transition: .3s;
+        }
+
+        .grad:hover{
+            background-position-x: -20%;
+        }
+        
+    </style>
+
+<body>
+    <div class="card">
+        <div class="grad"></div>
+    </div>
+</body>
+</html>

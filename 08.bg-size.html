@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bg size</title>
+    
+    <style>
+        .city{
+            width: 80%;
+            height: 200px;
+            border: 1px solid red;
+            margin: 10px;
+            background-image: url(./images/city.jpg);
+            background-repeat: no-repeat;
+        } 
+        .size{
+            background-size: 50% 500px;
+            background-position: 50% 50%;
+        }
+
+        /* 完整顯示一張圖大小，但會留白，較不常用 */
+        .contain{
+            background-size: contain;
+        }
+
+        /* 畫面等比例顯示最佳化，但會被切割，主要常用 */
+        .cover{
+            background-size: cover;
+
+            /* 調整圖片畫面位置顯示 */
+            background-position: 0% 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="city size"></div>   
+    <div class="city contain"></div>   
+    <div class="city cover"></div>  
+      
+</body>
+</html>

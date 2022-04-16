@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background: radial-gradient(circle at 50% 50%, rgb(255, 167, 52), rgb(255, 130, 28));
+            border-radius: 50%;
+            box-shadow: 0px 0px 7px 10px rgb(255, 186, 95);
+
+            
+            animation-name:pinpon;
+            animation-duration: 2S;
+            animation-timing-function:linear;
+
+            /* 動畫次數 number/infinite/initial/inherit */
+            animation-iteration-count: infinite;
+
+            /* 動畫方向 normal/reverse/alternate/alternate-reverse/initial/inherit */
+            animation-direction: alternate;
+
+
+        }
+
+        .box:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes pinpon {
+            0%{
+                transform: translate(0,0);
+            }
+            50%{
+                transform: translate(200px,150px);
+            }
+            100%{
+                transform: translate(300px,0);
+            }
+        }
+
+        p{
+            
+            text-align: center;
+            
+        }
+    </style>
+
+
+<body>
+    <div class="box">
+        <p>sun</p>
+    </div>
+</body>
+</html>
