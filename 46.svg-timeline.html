@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>svg timeline</title>
+        <style>
+            svg {
+                width: 130px;
+            }
+
+            .wrap {
+                position: relative;
+                margin-left: 50px;
+            }
+            .timeline-path {
+                stroke: brown;
+            }
+
+            .ball {
+                position: absolute;
+                top: 0px;
+                width: 1px;
+                height: 1px;
+                transform: translate3d(1px, 566px, 0);
+            }
+
+            .ball::before,
+            .ball::after {
+                content: "";
+                display: block;
+                background-color: red;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .box {
+                height: 1500px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <!-- https://www.columbifarms.com/ -->
+        <div class="wrap">
+            <svg
+                class="timeline-path absolute top-0 stroke-green-gui-shading fill-none opacity-50"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 130 5669"
+                data-timeline-bg-svg=""
+            >
+                <path
+                    id="path"
+                    fill="none"
+                    d="M1 0c.1 52.6 33.7 98.5 64.5 141.7C193.1 304.8 104.9 352.1 19.9 496c-24.9 47.4-24.8 94.3 0 141.7 85 143.6 173.2 191.6 45.6 354.3C34.7 1035.3 1 1081.2 1 1133.7v.3c.1 52.6 33.7 98.5 64.5 141.7 127.7 163.1 39.4 210.4-45.6 354.3-24.9 47.4-24.8 94.3 0 141.7 85 143.6 173.2 191.6 45.6 354.3C34.7 2169.3 1 2215.2 1 2267.7v.3c.1 52.6 33.7 98.5 64.5 141.7 127.7 163.1 39.4 210.4-45.6 354.3-24.9 47.4-24.8 94.3 0 141.7 85 143.6 173.2 191.6 45.6 354.3C34.7 3303.3 1 3349.2 1 3401.7v.3c.1 52.6 33.7 98.5 64.5 141.7 127.7 163.1 39.4 210.4-45.6 354.3-24.9 47.4-24.8 94.3 0 141.7 85 143.6 173.2 191.6 45.6 354.3C34.7 4437.3 1 4483.2 1 4535.7v.3c.1 52.6 33.7 98.5 64.5 141.7 127.7 163.1 39.4 210.4-45.6 354.3-24.9 47.4-24.8 94.3 0 141.7 85 143.6 173.2 191.6 45.6 354.3C34.7 5571.3 1 5617.2 1 5669.7"
+                ></path>
+            </svg>
+
+            <div class="ball"></div>
+        </div>
+
+        <div class="box"></div>
+
+        <script>
+            const path = document.querySelector("#path");
+            const ball = document.querySelector(".ball");
+
+            const pathLength = path.getTotalLength();
+            console.log("pathLength", pathLength);
+
+            const svgWrap = document.querySelector(".wrap");
+
+            function moveBall(percent) {
+                const lineLength = pathLength * (percent / 100);
+                const point = path.getPointAtLength(lineLength);
+                const ptX = point.x;
+                const ptY = point.y;
+
+                console.log("ptX:", ptX, "ptY", ptY);
+                ball.style.transform = `translate3d(${ptX}px, ${ptY}px, 0)`;
+            }
+
+            window.addEventListener("scroll", function () {
+                const svgWrapOffsetTop = svgWrap.offsetTop;
+                const svgWrapHeight = svgWrap.offsetHeight;
+
+                const windowPageYOffset = window.pageYOffset;
+                const windowHeight = window.innerHeight;
+                // console.log("windowPageYOffset", windowPageYOffset);
+
+                const percent =
+                    ((windowPageYOffset - svgWrapOffsetTop + windowHeight / 3) /
+                        svgWrapHeight) *
+                    100;
+                console.log("percent", percent);
+                moveBall(percent);
+            });
+        </script>
+    </body>
+</html>
