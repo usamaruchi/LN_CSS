@@ -1,0 +1,6 @@
+HTML:超文本標記語言(Hyper Text Markup Language)，用來製作網頁的一門語言
+
+結構寫到HTML、表現寫到CSS、行為寫到JavaScript
+
+charset="utf-8" 萬國碼，包含了全世界所有國家需要用到的字符
+
