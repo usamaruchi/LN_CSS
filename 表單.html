@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表單</title>
+</head>
+
+<body>
+  <!-- action -> url地址，指定接收處理表單數據的伺服器位置 -->
+  <!-- method -> get/post，處理表單數據的提交方式，取值為 get 或 post -->
+  <!-- name -> 名稱，指定表單的名稱，以區分同一個頁面中有多個表單域 -->
+  <form action="xxx.php" method="get" name="form1">
+    <!-- text 文本框，用戶可以輸入任何文字 -->
+    <!-- value 由用戶定義，規定input元素的值 -->
+    <!-- maxlength 正整數，規定入字段中的字符最大長度 -->
+    用戶名: <input type="text" name="username" value="請輸入用戶名" maxlength="6"> <br>
+
+    <!-- password 密碼框，用戶看不見輸入的密碼  -->
+    密碼: <input type="password" name="pwt"> <br>
+
+    <!-- radio 單選按鈕，可以實現多選一 -->
+    <!-- name 是表單元素名字，這裡性別單選按鈕必須有相同的名字 name 才可以實現多選一 -->
+    <!-- 單選按鈕和多選可以默認選擇 checked 屬性，當頁面打開時可以默認選中這個按鈕  -->
+    性別: <input type="radio" name="sex" value="男" checked>男 <input type="radio" name="sex" value="女">女<br>
+
+    <!-- checkbox 多選框，可以實現多選-->
+    愛好: <input type="checkbox" name="hobby" value="">吃飯 <input type="checkbox" name="hobby" value="睡覺">睡覺 <input
+      type="checkbox" name="hobby" value="運動">運動 <input type="checkbox" name="hobby" value="學習">學習
+    <br>
+
+    <!-- submit 點擊了提交按鈕，可以把表單域 form 裡面的表單元素中的值，提交給後台伺服器 -->
+    <input type="submit" value="確認">
+
+    <!-- reset 還原初始默認狀態 -->
+    <input type="reset" value="重新填寫">
+
+    <!-- button 普通按鈕，後期結合 js 搭配使用 -->
+    <input type="button" value="獲取驗證碼"> <br>
+
+    <!-- file 文件域，上傳文件使用 -->
+    上傳頭貼: <input type="file">
+  </form>
+</body>
+
+</html>
